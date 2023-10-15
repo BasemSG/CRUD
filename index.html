@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>crud</h1>
+        <p>create read update delete</p>
+      </div>
+      <div class="popup">
+        <p>you sholud fill title & price & category field</p>
+      </div>
+      <div class="input">
+        <input type="text" id="title" placeholder="title" />
+        <div class="price">
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="taxs"
+            placeholder="taxs"
+          />
+          <input
+            oninput="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="discount"
+          />
+          <input type="text" id="total" value="total : " readonly />
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="create">create</button>
+        <button id="delall"></button>
+      </div>
+      <div class="output">
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxs</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>count</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+              <th>clear</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
